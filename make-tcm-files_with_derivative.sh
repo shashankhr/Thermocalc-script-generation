@@ -7,19 +7,26 @@ IFS=,
 #Make sure that the CSV file has an extra row and an extra column in the end with absolutely anything in it,
 #it will be ignored
 
-INPUT=book3.csv
+INPUT=real_data.csv
 
 {
-	read T el[1] el[2] el[3] extra #reads elements from first line, which is the header. Note that the last column is ignored, and should just have something
-	while read -r T X[1] X[2] X[3] extra2
+	read T el[1] el[2] el[3] el[4] el[5] el[6] el[7] el[8] el[9] el[10] el[11] el[12] el[13] extra #reads elements from first line, which is the header. Note that the last column is ignored, and should just have something
+	while read -r T X[1] X[2] X[3] X[4] X[5] X[6] X[7] X[8] X[9] X[10] X[11] X[12] X[13] extra2
 		do
 		{
 			num=1
 			totalnum=${#el[@]}
 		
 			echo "go da"
-			echo "sw fe"
-			echo "def-sp" Ni ${el[1]} ${el[2]} ${el[3]} 
+			echo "sw ttni8"
+			# echo "def-sp" Ni ${el[1]} ${el[2]} ${el[3]}
+			echo "def-sp" Ni 
+			while ((num<totalnum))
+			do
+				echo "def-sp" ${el[num]}
+				((num++))
+			done
+			num=1
 			echo "rej p"
 			echo "*"
 			echo "rest p"
@@ -27,9 +34,15 @@ INPUT=book3.csv
 			echo "get_data"
 			echo "goto poly"
 			echo "s-c n=1 p=1e5 t="$T
-			echo "s-c X("${el[1]}")="${X[1]}
-			echo "s-c X("${el[2]}")="${X[2]} 
-			echo "s-c X("${el[3]}")="${X[3]} 
+			# echo "s-c X("${el[1]}")="${X[1]}
+# 			echo "s-c X("${el[2]}")="${X[2]} 
+# 			echo "s-c X("${el[3]}")="${X[3]} 
+			while ((num<totalnum))
+			do
+				echo "s-c X("${el[num]}")="${X[num]}
+				((num++))
+			done
+			num=1
 			echo "c-e"
 			echo ""
 			

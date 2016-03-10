@@ -1,6 +1,18 @@
 go da
-sw fe
-def-sp Ni Fe Cr Mn
+sw ttni8
+def-sp Ni
+def-sp C
+def-sp Si
+def-sp Al
+def-sp B
+def-sp Co
+def-sp Cr
+def-sp Fe
+def-sp Mo
+def-sp Nb
+def-sp Ta
+def-sp Ti
+def-sp W
 rej p
 *
 rest p
@@ -8,56 +20,1265 @@ FCC_A1
 get_data
 goto poly
 s-c n=1 p=1e5 t=1234
-s-c X(Fe)=0.2
-s-c X(Cr)=0.1
-s-c X(Mn)=0.05
+s-c X(C)=0.0007
+s-c X(Si)=0.0002
+s-c X(Al)=0.0558
+s-c X(B)=0.00018
+s-c X(Co)=0.093
+s-c X(Cr)=0.08
+s-c X(Fe)=0.0009
+s-c X(Mo)=0.0049
+s-c X(Nb)=0.00048
+s-c X(Ta)=0.0321
+s-c X(Ti)=0.0074
+s-c X(W)=0.0141
 c-e
 
-s-a-v 1 X(Fe) .1998 .2002 .0002
+s-a-v 1 X(C) .0006993 .0007007 .0000007
 step
 
 enter_sym
 fun
-DG_Fe_Cr
+DG_C_Si
+GM(FCC_A1).X(Si)
+
+enter_sym
+tab
+dg_table_C_Si
+X(C) DG_C_Si
+
+tabulate dg_table_C_Si
+file C_Si_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Al
+GM(FCC_A1).X(Al)
+
+enter_sym
+tab
+dg_table_C_Al
+X(C) DG_C_Al
+
+tabulate dg_table_C_Al
+file C_Al_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_B
+GM(FCC_A1).X(B)
+
+enter_sym
+tab
+dg_table_C_B
+X(C) DG_C_B
+
+tabulate dg_table_C_B
+file C_B_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Co
+GM(FCC_A1).X(Co)
+
+enter_sym
+tab
+dg_table_C_Co
+X(C) DG_C_Co
+
+tabulate dg_table_C_Co
+file C_Co_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Cr
 GM(FCC_A1).X(Cr)
 
 enter_sym
 tab
-dg_table_Fe_Cr
-X(Fe) DG_Fe_Cr
+dg_table_C_Cr
+X(C) DG_C_Cr
 
-tabulate dg_table_Fe_Cr
-file Fe_Cr_data.txt
+tabulate dg_table_C_Cr
+file C_Cr_data.txt
 
-s-a-v 1 X(Fe) .1998 .2002 .0002
+s-a-v 1 X(C) .0006993 .0007007 .0000007
 step
 
 enter_sym
 fun
-DG_Fe_Mn
-GM(FCC_A1).X(Mn)
+DG_C_Fe
+GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_Fe_Mn
-X(Fe) DG_Fe_Mn
+dg_table_C_Fe
+X(C) DG_C_Fe
 
-tabulate dg_table_Fe_Mn
-file Fe_Mn_data.txt
+tabulate dg_table_C_Fe
+file C_Fe_data.txt
 
-s-a-v 1 X(Cr) .0999 .1001 .0001
+s-a-v 1 X(C) .0006993 .0007007 .0000007
 step
 
 enter_sym
 fun
-DG_Cr_Mn
-GM(FCC_A1).X(Mn)
+DG_C_Mo
+GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_Cr_Mn
-X(Cr) DG_Cr_Mn
+dg_table_C_Mo
+X(C) DG_C_Mo
 
-tabulate dg_table_Cr_Mn
-file Cr_Mn_data.txt
+tabulate dg_table_C_Mo
+file C_Mo_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_C_Nb
+X(C) DG_C_Nb
+
+tabulate dg_table_C_Nb
+file C_Nb_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_C_Ta
+X(C) DG_C_Ta
+
+tabulate dg_table_C_Ta
+file C_Ta_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_C_Ti
+X(C) DG_C_Ti
+
+tabulate dg_table_C_Ti
+file C_Ti_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_C_W
+X(C) DG_C_W
+
+tabulate dg_table_C_W
+file C_W_data.txt
+
+s-a-v 1 X(C) .0006993 .0007007 .0000007
+step
+
+enter_sym
+fun
+DG_C_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_C_Zr
+X(C) DG_C_Zr
+
+tabulate dg_table_C_Zr
+file C_Zr_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Al
+GM(FCC_A1).X(Al)
+
+enter_sym
+tab
+dg_table_Si_Al
+X(Si) DG_Si_Al
+
+tabulate dg_table_Si_Al
+file Si_Al_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_B
+GM(FCC_A1).X(B)
+
+enter_sym
+tab
+dg_table_Si_B
+X(Si) DG_Si_B
+
+tabulate dg_table_Si_B
+file Si_B_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Co
+GM(FCC_A1).X(Co)
+
+enter_sym
+tab
+dg_table_Si_Co
+X(Si) DG_Si_Co
+
+tabulate dg_table_Si_Co
+file Si_Co_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Cr
+GM(FCC_A1).X(Cr)
+
+enter_sym
+tab
+dg_table_Si_Cr
+X(Si) DG_Si_Cr
+
+tabulate dg_table_Si_Cr
+file Si_Cr_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Fe
+GM(FCC_A1).X(Fe)
+
+enter_sym
+tab
+dg_table_Si_Fe
+X(Si) DG_Si_Fe
+
+tabulate dg_table_Si_Fe
+file Si_Fe_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Mo
+GM(FCC_A1).X(Mo)
+
+enter_sym
+tab
+dg_table_Si_Mo
+X(Si) DG_Si_Mo
+
+tabulate dg_table_Si_Mo
+file Si_Mo_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_Si_Nb
+X(Si) DG_Si_Nb
+
+tabulate dg_table_Si_Nb
+file Si_Nb_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Si_Ta
+X(Si) DG_Si_Ta
+
+tabulate dg_table_Si_Ta
+file Si_Ta_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Si_Ti
+X(Si) DG_Si_Ti
+
+tabulate dg_table_Si_Ti
+file Si_Ti_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Si_W
+X(Si) DG_Si_W
+
+tabulate dg_table_Si_W
+file Si_W_data.txt
+
+s-a-v 1 X(Si) .0001998 .0002002 .0000002
+step
+
+enter_sym
+fun
+DG_Si_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Si_Zr
+X(Si) DG_Si_Zr
+
+tabulate dg_table_Si_Zr
+file Si_Zr_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_B
+GM(FCC_A1).X(B)
+
+enter_sym
+tab
+dg_table_Al_B
+X(Al) DG_Al_B
+
+tabulate dg_table_Al_B
+file Al_B_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Co
+GM(FCC_A1).X(Co)
+
+enter_sym
+tab
+dg_table_Al_Co
+X(Al) DG_Al_Co
+
+tabulate dg_table_Al_Co
+file Al_Co_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Cr
+GM(FCC_A1).X(Cr)
+
+enter_sym
+tab
+dg_table_Al_Cr
+X(Al) DG_Al_Cr
+
+tabulate dg_table_Al_Cr
+file Al_Cr_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Fe
+GM(FCC_A1).X(Fe)
+
+enter_sym
+tab
+dg_table_Al_Fe
+X(Al) DG_Al_Fe
+
+tabulate dg_table_Al_Fe
+file Al_Fe_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Mo
+GM(FCC_A1).X(Mo)
+
+enter_sym
+tab
+dg_table_Al_Mo
+X(Al) DG_Al_Mo
+
+tabulate dg_table_Al_Mo
+file Al_Mo_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_Al_Nb
+X(Al) DG_Al_Nb
+
+tabulate dg_table_Al_Nb
+file Al_Nb_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Al_Ta
+X(Al) DG_Al_Ta
+
+tabulate dg_table_Al_Ta
+file Al_Ta_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Al_Ti
+X(Al) DG_Al_Ti
+
+tabulate dg_table_Al_Ti
+file Al_Ti_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Al_W
+X(Al) DG_Al_W
+
+tabulate dg_table_Al_W
+file Al_W_data.txt
+
+s-a-v 1 X(Al) .0557442 .0558558 .0000558
+step
+
+enter_sym
+fun
+DG_Al_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Al_Zr
+X(Al) DG_Al_Zr
+
+tabulate dg_table_Al_Zr
+file Al_Zr_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Co
+GM(FCC_A1).X(Co)
+
+enter_sym
+tab
+dg_table_B_Co
+X(B) DG_B_Co
+
+tabulate dg_table_B_Co
+file B_Co_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Cr
+GM(FCC_A1).X(Cr)
+
+enter_sym
+tab
+dg_table_B_Cr
+X(B) DG_B_Cr
+
+tabulate dg_table_B_Cr
+file B_Cr_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Fe
+GM(FCC_A1).X(Fe)
+
+enter_sym
+tab
+dg_table_B_Fe
+X(B) DG_B_Fe
+
+tabulate dg_table_B_Fe
+file B_Fe_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Mo
+GM(FCC_A1).X(Mo)
+
+enter_sym
+tab
+dg_table_B_Mo
+X(B) DG_B_Mo
+
+tabulate dg_table_B_Mo
+file B_Mo_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_B_Nb
+X(B) DG_B_Nb
+
+tabulate dg_table_B_Nb
+file B_Nb_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_B_Ta
+X(B) DG_B_Ta
+
+tabulate dg_table_B_Ta
+file B_Ta_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_B_Ti
+X(B) DG_B_Ti
+
+tabulate dg_table_B_Ti
+file B_Ti_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_B_W
+X(B) DG_B_W
+
+tabulate dg_table_B_W
+file B_W_data.txt
+
+s-a-v 1 X(B) .00017982 .00018018 .00000018
+step
+
+enter_sym
+fun
+DG_B_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_B_Zr
+X(B) DG_B_Zr
+
+tabulate dg_table_B_Zr
+file B_Zr_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Cr
+GM(FCC_A1).X(Cr)
+
+enter_sym
+tab
+dg_table_Co_Cr
+X(Co) DG_Co_Cr
+
+tabulate dg_table_Co_Cr
+file Co_Cr_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Fe
+GM(FCC_A1).X(Fe)
+
+enter_sym
+tab
+dg_table_Co_Fe
+X(Co) DG_Co_Fe
+
+tabulate dg_table_Co_Fe
+file Co_Fe_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Mo
+GM(FCC_A1).X(Mo)
+
+enter_sym
+tab
+dg_table_Co_Mo
+X(Co) DG_Co_Mo
+
+tabulate dg_table_Co_Mo
+file Co_Mo_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_Co_Nb
+X(Co) DG_Co_Nb
+
+tabulate dg_table_Co_Nb
+file Co_Nb_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Co_Ta
+X(Co) DG_Co_Ta
+
+tabulate dg_table_Co_Ta
+file Co_Ta_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Co_Ti
+X(Co) DG_Co_Ti
+
+tabulate dg_table_Co_Ti
+file Co_Ti_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Co_W
+X(Co) DG_Co_W
+
+tabulate dg_table_Co_W
+file Co_W_data.txt
+
+s-a-v 1 X(Co) .092907 .093093 .000093
+step
+
+enter_sym
+fun
+DG_Co_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Co_Zr
+X(Co) DG_Co_Zr
+
+tabulate dg_table_Co_Zr
+file Co_Zr_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_Fe
+GM(FCC_A1).X(Fe)
+
+enter_sym
+tab
+dg_table_Cr_Fe
+X(Cr) DG_Cr_Fe
+
+tabulate dg_table_Cr_Fe
+file Cr_Fe_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_Mo
+GM(FCC_A1).X(Mo)
+
+enter_sym
+tab
+dg_table_Cr_Mo
+X(Cr) DG_Cr_Mo
+
+tabulate dg_table_Cr_Mo
+file Cr_Mo_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_Cr_Nb
+X(Cr) DG_Cr_Nb
+
+tabulate dg_table_Cr_Nb
+file Cr_Nb_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Cr_Ta
+X(Cr) DG_Cr_Ta
+
+tabulate dg_table_Cr_Ta
+file Cr_Ta_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Cr_Ti
+X(Cr) DG_Cr_Ti
+
+tabulate dg_table_Cr_Ti
+file Cr_Ti_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Cr_W
+X(Cr) DG_Cr_W
+
+tabulate dg_table_Cr_W
+file Cr_W_data.txt
+
+s-a-v 1 X(Cr) .07992 .08008 .00008
+step
+
+enter_sym
+fun
+DG_Cr_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Cr_Zr
+X(Cr) DG_Cr_Zr
+
+tabulate dg_table_Cr_Zr
+file Cr_Zr_data.txt
+
+s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+step
+
+enter_sym
+fun
+DG_Fe_Mo
+GM(FCC_A1).X(Mo)
+
+enter_sym
+tab
+dg_table_Fe_Mo
+X(Fe) DG_Fe_Mo
+
+tabulate dg_table_Fe_Mo
+file Fe_Mo_data.txt
+
+s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+step
+
+enter_sym
+fun
+DG_Fe_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_Fe_Nb
+X(Fe) DG_Fe_Nb
+
+tabulate dg_table_Fe_Nb
+file Fe_Nb_data.txt
+
+s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+step
+
+enter_sym
+fun
+DG_Fe_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Fe_Ta
+X(Fe) DG_Fe_Ta
+
+tabulate dg_table_Fe_Ta
+file Fe_Ta_data.txt
+
+s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+step
+
+enter_sym
+fun
+DG_Fe_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Fe_Ti
+X(Fe) DG_Fe_Ti
+
+tabulate dg_table_Fe_Ti
+file Fe_Ti_data.txt
+
+s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+step
+
+enter_sym
+fun
+DG_Fe_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Fe_W
+X(Fe) DG_Fe_W
+
+tabulate dg_table_Fe_W
+file Fe_W_data.txt
+
+s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+step
+
+enter_sym
+fun
+DG_Fe_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Fe_Zr
+X(Fe) DG_Fe_Zr
+
+tabulate dg_table_Fe_Zr
+file Fe_Zr_data.txt
+
+s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+step
+
+enter_sym
+fun
+DG_Mo_Nb
+GM(FCC_A1).X(Nb)
+
+enter_sym
+tab
+dg_table_Mo_Nb
+X(Mo) DG_Mo_Nb
+
+tabulate dg_table_Mo_Nb
+file Mo_Nb_data.txt
+
+s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+step
+
+enter_sym
+fun
+DG_Mo_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Mo_Ta
+X(Mo) DG_Mo_Ta
+
+tabulate dg_table_Mo_Ta
+file Mo_Ta_data.txt
+
+s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+step
+
+enter_sym
+fun
+DG_Mo_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Mo_Ti
+X(Mo) DG_Mo_Ti
+
+tabulate dg_table_Mo_Ti
+file Mo_Ti_data.txt
+
+s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+step
+
+enter_sym
+fun
+DG_Mo_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Mo_W
+X(Mo) DG_Mo_W
+
+tabulate dg_table_Mo_W
+file Mo_W_data.txt
+
+s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+step
+
+enter_sym
+fun
+DG_Mo_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Mo_Zr
+X(Mo) DG_Mo_Zr
+
+tabulate dg_table_Mo_Zr
+file Mo_Zr_data.txt
+
+s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+step
+
+enter_sym
+fun
+DG_Nb_Ta
+GM(FCC_A1).X(Ta)
+
+enter_sym
+tab
+dg_table_Nb_Ta
+X(Nb) DG_Nb_Ta
+
+tabulate dg_table_Nb_Ta
+file Nb_Ta_data.txt
+
+s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+step
+
+enter_sym
+fun
+DG_Nb_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Nb_Ti
+X(Nb) DG_Nb_Ti
+
+tabulate dg_table_Nb_Ti
+file Nb_Ti_data.txt
+
+s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+step
+
+enter_sym
+fun
+DG_Nb_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Nb_W
+X(Nb) DG_Nb_W
+
+tabulate dg_table_Nb_W
+file Nb_W_data.txt
+
+s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+step
+
+enter_sym
+fun
+DG_Nb_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Nb_Zr
+X(Nb) DG_Nb_Zr
+
+tabulate dg_table_Nb_Zr
+file Nb_Zr_data.txt
+
+s-a-v 1 X(Ta) .0320679 .0321321 .0000321
+step
+
+enter_sym
+fun
+DG_Ta_Ti
+GM(FCC_A1).X(Ti)
+
+enter_sym
+tab
+dg_table_Ta_Ti
+X(Ta) DG_Ta_Ti
+
+tabulate dg_table_Ta_Ti
+file Ta_Ti_data.txt
+
+s-a-v 1 X(Ta) .0320679 .0321321 .0000321
+step
+
+enter_sym
+fun
+DG_Ta_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Ta_W
+X(Ta) DG_Ta_W
+
+tabulate dg_table_Ta_W
+file Ta_W_data.txt
+
+s-a-v 1 X(Ta) .0320679 .0321321 .0000321
+step
+
+enter_sym
+fun
+DG_Ta_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Ta_Zr
+X(Ta) DG_Ta_Zr
+
+tabulate dg_table_Ta_Zr
+file Ta_Zr_data.txt
+
+s-a-v 1 X(Ti) .0073926 .0074074 .0000074
+step
+
+enter_sym
+fun
+DG_Ti_W
+GM(FCC_A1).X(W)
+
+enter_sym
+tab
+dg_table_Ti_W
+X(Ti) DG_Ti_W
+
+tabulate dg_table_Ti_W
+file Ti_W_data.txt
+
+s-a-v 1 X(Ti) .0073926 .0074074 .0000074
+step
+
+enter_sym
+fun
+DG_Ti_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_Ti_Zr
+X(Ti) DG_Ti_Zr
+
+tabulate dg_table_Ti_Zr
+file Ti_Zr_data.txt
+
+s-a-v 1 X(W) .0140859 .0141141 .0000141
+step
+
+enter_sym
+fun
+DG_W_Zr
+GM(FCC_A1).X(Zr)
+
+enter_sym
+tab
+dg_table_W_Zr
+X(W) DG_W_Zr
+
+tabulate dg_table_W_Zr
+file W_Zr_data.txt
 
