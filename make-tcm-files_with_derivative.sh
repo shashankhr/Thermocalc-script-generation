@@ -21,7 +21,7 @@ INPUT=real_data.csv
 			echo "sw ttni8"
 			# echo "def-sp" Ni ${el[1]} ${el[2]} ${el[3]}
 			echo "def-sp" Ni 
-			while ((num<totalnum))
+			while ((num<=totalnum))
 			do
 				echo "def-sp" ${el[num]}
 				((num++))
@@ -37,7 +37,7 @@ INPUT=real_data.csv
 			# echo "s-c X("${el[1]}")="${X[1]}
 # 			echo "s-c X("${el[2]}")="${X[2]} 
 # 			echo "s-c X("${el[3]}")="${X[3]} 
-			while ((num<totalnum))
+			while ((num<=totalnum))
 			do
 				echo "s-c X("${el[num]}")="${X[num]}
 				((num++))
@@ -51,22 +51,26 @@ INPUT=real_data.csv
 				num2=$((num+1))
 				while ((num2<=totalnum))
 				do
-					echo "s-a-v 1 X("${el[(($num))]}")" $(bc<<<"scale=10; ${X[$num]}-${X[$num]}*0.001") $(bc<<<"scale=10; ${X[$num]}+${X[$num]}*0.001") $(bc<<<"scale=10; ${X[$num]}*0.001")
+					echo "s-a-v 1 X("${el[(($num))]}")" $(bc<<<"scale=10; ${X[$num]}-${X[$num]}*0.01") $(bc<<<"scale=10; ${X[$num]}+${X[$num]}*0.01") $(bc<<<"scale=10; ${X[$num]}*0.01")
 					echo "step"
 					echo ""
 					echo "enter_sym"
 					echo "fun"
-					echo "DG_"${el[$num]}"_"${el[$num2]}
+					echo "DG"${el[$num]}${el[$num2]}
 					echo "GM(FCC_A1).X("${el[$num2]}")"
 					echo ""
 					echo "enter_sym"
 					echo "tab"
-					echo "dg_table_"${el[$num]}"_"${el[$num2]}
-					echo "X("${el[$num]}") DG_"${el[$num]}"_"${el[$num2]}
+					echo "tab"${el[$num]}${el[$num2]}
+					echo "X("${el[$num]}") DG"${el[$num]}${el[$num2]}
 					echo ""
-					echo "tabulate dg_table_"${el[$num]}"_"${el[$num2]}
+					echo "tabulate tab"${el[$num]}${el[$num2]}
 					echo "file "${el[$num]}"_"${el[$num2]}"_data.txt"
 					echo ""
+					echo "del_sym"
+					echo "tab"${el[$num]}${el[$num2]}
+					echo "del_sym"
+					echo "DG"${el[$num]}${el[$num2]}
 					((num2++))
 				done
 				((num++))

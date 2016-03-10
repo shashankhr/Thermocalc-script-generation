@@ -13,6 +13,7 @@ def-sp Nb
 def-sp Ta
 def-sp Ti
 def-sp W
+def-sp Zr
 rej p
 *
 rest p
@@ -32,1253 +33,1566 @@ s-c X(Nb)=0.00048
 s-c X(Ta)=0.0321
 s-c X(Ti)=0.0074
 s-c X(W)=0.0141
+s-c X(Zr)=0.00009
 c-e
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Si
+DGCSi
 GM(FCC_A1).X(Si)
 
 enter_sym
 tab
-dg_table_C_Si
-X(C) DG_C_Si
+tabCSi
+X(C) DGCSi
 
-tabulate dg_table_C_Si
+tabulate tabCSi
 file C_Si_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCSi
+del_sym
+DGCSi
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Al
+DGCAl
 GM(FCC_A1).X(Al)
 
 enter_sym
 tab
-dg_table_C_Al
-X(C) DG_C_Al
+tabCAl
+X(C) DGCAl
 
-tabulate dg_table_C_Al
+tabulate tabCAl
 file C_Al_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCAl
+del_sym
+DGCAl
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_B
+DGCB
 GM(FCC_A1).X(B)
 
 enter_sym
 tab
-dg_table_C_B
-X(C) DG_C_B
+tabCB
+X(C) DGCB
 
-tabulate dg_table_C_B
+tabulate tabCB
 file C_B_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCB
+del_sym
+DGCB
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Co
+DGCCo
 GM(FCC_A1).X(Co)
 
 enter_sym
 tab
-dg_table_C_Co
-X(C) DG_C_Co
+tabCCo
+X(C) DGCCo
 
-tabulate dg_table_C_Co
+tabulate tabCCo
 file C_Co_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCCo
+del_sym
+DGCCo
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Cr
+DGCCr
 GM(FCC_A1).X(Cr)
 
 enter_sym
 tab
-dg_table_C_Cr
-X(C) DG_C_Cr
+tabCCr
+X(C) DGCCr
 
-tabulate dg_table_C_Cr
+tabulate tabCCr
 file C_Cr_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCCr
+del_sym
+DGCCr
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Fe
+DGCFe
 GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_C_Fe
-X(C) DG_C_Fe
+tabCFe
+X(C) DGCFe
 
-tabulate dg_table_C_Fe
+tabulate tabCFe
 file C_Fe_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCFe
+del_sym
+DGCFe
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Mo
+DGCMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_C_Mo
-X(C) DG_C_Mo
+tabCMo
+X(C) DGCMo
 
-tabulate dg_table_C_Mo
+tabulate tabCMo
 file C_Mo_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCMo
+del_sym
+DGCMo
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Nb
+DGCNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_C_Nb
-X(C) DG_C_Nb
+tabCNb
+X(C) DGCNb
 
-tabulate dg_table_C_Nb
+tabulate tabCNb
 file C_Nb_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCNb
+del_sym
+DGCNb
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Ta
+DGCTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_C_Ta
-X(C) DG_C_Ta
+tabCTa
+X(C) DGCTa
 
-tabulate dg_table_C_Ta
+tabulate tabCTa
 file C_Ta_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCTa
+del_sym
+DGCTa
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Ti
+DGCTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_C_Ti
-X(C) DG_C_Ti
+tabCTi
+X(C) DGCTi
 
-tabulate dg_table_C_Ti
+tabulate tabCTi
 file C_Ti_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCTi
+del_sym
+DGCTi
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_W
+DGCW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_C_W
-X(C) DG_C_W
+tabCW
+X(C) DGCW
 
-tabulate dg_table_C_W
+tabulate tabCW
 file C_W_data.txt
 
-s-a-v 1 X(C) .0006993 .0007007 .0000007
+del_sym
+tabCW
+del_sym
+DGCW
+s-a-v 1 X(C) .000693 .000707 .000007
 step
 
 enter_sym
 fun
-DG_C_Zr
+DGCZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_C_Zr
-X(C) DG_C_Zr
+tabCZr
+X(C) DGCZr
 
-tabulate dg_table_C_Zr
+tabulate tabCZr
 file C_Zr_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabCZr
+del_sym
+DGCZr
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Al
+DGSiAl
 GM(FCC_A1).X(Al)
 
 enter_sym
 tab
-dg_table_Si_Al
-X(Si) DG_Si_Al
+tabSiAl
+X(Si) DGSiAl
 
-tabulate dg_table_Si_Al
+tabulate tabSiAl
 file Si_Al_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiAl
+del_sym
+DGSiAl
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_B
+DGSiB
 GM(FCC_A1).X(B)
 
 enter_sym
 tab
-dg_table_Si_B
-X(Si) DG_Si_B
+tabSiB
+X(Si) DGSiB
 
-tabulate dg_table_Si_B
+tabulate tabSiB
 file Si_B_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiB
+del_sym
+DGSiB
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Co
+DGSiCo
 GM(FCC_A1).X(Co)
 
 enter_sym
 tab
-dg_table_Si_Co
-X(Si) DG_Si_Co
+tabSiCo
+X(Si) DGSiCo
 
-tabulate dg_table_Si_Co
+tabulate tabSiCo
 file Si_Co_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiCo
+del_sym
+DGSiCo
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Cr
+DGSiCr
 GM(FCC_A1).X(Cr)
 
 enter_sym
 tab
-dg_table_Si_Cr
-X(Si) DG_Si_Cr
+tabSiCr
+X(Si) DGSiCr
 
-tabulate dg_table_Si_Cr
+tabulate tabSiCr
 file Si_Cr_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiCr
+del_sym
+DGSiCr
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Fe
+DGSiFe
 GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_Si_Fe
-X(Si) DG_Si_Fe
+tabSiFe
+X(Si) DGSiFe
 
-tabulate dg_table_Si_Fe
+tabulate tabSiFe
 file Si_Fe_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiFe
+del_sym
+DGSiFe
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Mo
+DGSiMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_Si_Mo
-X(Si) DG_Si_Mo
+tabSiMo
+X(Si) DGSiMo
 
-tabulate dg_table_Si_Mo
+tabulate tabSiMo
 file Si_Mo_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiMo
+del_sym
+DGSiMo
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Nb
+DGSiNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_Si_Nb
-X(Si) DG_Si_Nb
+tabSiNb
+X(Si) DGSiNb
 
-tabulate dg_table_Si_Nb
+tabulate tabSiNb
 file Si_Nb_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiNb
+del_sym
+DGSiNb
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Ta
+DGSiTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Si_Ta
-X(Si) DG_Si_Ta
+tabSiTa
+X(Si) DGSiTa
 
-tabulate dg_table_Si_Ta
+tabulate tabSiTa
 file Si_Ta_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiTa
+del_sym
+DGSiTa
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Ti
+DGSiTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Si_Ti
-X(Si) DG_Si_Ti
+tabSiTi
+X(Si) DGSiTi
 
-tabulate dg_table_Si_Ti
+tabulate tabSiTi
 file Si_Ti_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiTi
+del_sym
+DGSiTi
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_W
+DGSiW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Si_W
-X(Si) DG_Si_W
+tabSiW
+X(Si) DGSiW
 
-tabulate dg_table_Si_W
+tabulate tabSiW
 file Si_W_data.txt
 
-s-a-v 1 X(Si) .0001998 .0002002 .0000002
+del_sym
+tabSiW
+del_sym
+DGSiW
+s-a-v 1 X(Si) .000198 .000202 .000002
 step
 
 enter_sym
 fun
-DG_Si_Zr
+DGSiZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Si_Zr
-X(Si) DG_Si_Zr
+tabSiZr
+X(Si) DGSiZr
 
-tabulate dg_table_Si_Zr
+tabulate tabSiZr
 file Si_Zr_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabSiZr
+del_sym
+DGSiZr
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_B
+DGAlB
 GM(FCC_A1).X(B)
 
 enter_sym
 tab
-dg_table_Al_B
-X(Al) DG_Al_B
+tabAlB
+X(Al) DGAlB
 
-tabulate dg_table_Al_B
+tabulate tabAlB
 file Al_B_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlB
+del_sym
+DGAlB
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Co
+DGAlCo
 GM(FCC_A1).X(Co)
 
 enter_sym
 tab
-dg_table_Al_Co
-X(Al) DG_Al_Co
+tabAlCo
+X(Al) DGAlCo
 
-tabulate dg_table_Al_Co
+tabulate tabAlCo
 file Al_Co_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlCo
+del_sym
+DGAlCo
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Cr
+DGAlCr
 GM(FCC_A1).X(Cr)
 
 enter_sym
 tab
-dg_table_Al_Cr
-X(Al) DG_Al_Cr
+tabAlCr
+X(Al) DGAlCr
 
-tabulate dg_table_Al_Cr
+tabulate tabAlCr
 file Al_Cr_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlCr
+del_sym
+DGAlCr
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Fe
+DGAlFe
 GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_Al_Fe
-X(Al) DG_Al_Fe
+tabAlFe
+X(Al) DGAlFe
 
-tabulate dg_table_Al_Fe
+tabulate tabAlFe
 file Al_Fe_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlFe
+del_sym
+DGAlFe
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Mo
+DGAlMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_Al_Mo
-X(Al) DG_Al_Mo
+tabAlMo
+X(Al) DGAlMo
 
-tabulate dg_table_Al_Mo
+tabulate tabAlMo
 file Al_Mo_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlMo
+del_sym
+DGAlMo
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Nb
+DGAlNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_Al_Nb
-X(Al) DG_Al_Nb
+tabAlNb
+X(Al) DGAlNb
 
-tabulate dg_table_Al_Nb
+tabulate tabAlNb
 file Al_Nb_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlNb
+del_sym
+DGAlNb
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Ta
+DGAlTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Al_Ta
-X(Al) DG_Al_Ta
+tabAlTa
+X(Al) DGAlTa
 
-tabulate dg_table_Al_Ta
+tabulate tabAlTa
 file Al_Ta_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlTa
+del_sym
+DGAlTa
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Ti
+DGAlTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Al_Ti
-X(Al) DG_Al_Ti
+tabAlTi
+X(Al) DGAlTi
 
-tabulate dg_table_Al_Ti
+tabulate tabAlTi
 file Al_Ti_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlTi
+del_sym
+DGAlTi
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_W
+DGAlW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Al_W
-X(Al) DG_Al_W
+tabAlW
+X(Al) DGAlW
 
-tabulate dg_table_Al_W
+tabulate tabAlW
 file Al_W_data.txt
 
-s-a-v 1 X(Al) .0557442 .0558558 .0000558
+del_sym
+tabAlW
+del_sym
+DGAlW
+s-a-v 1 X(Al) .055242 .056358 .000558
 step
 
 enter_sym
 fun
-DG_Al_Zr
+DGAlZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Al_Zr
-X(Al) DG_Al_Zr
+tabAlZr
+X(Al) DGAlZr
 
-tabulate dg_table_Al_Zr
+tabulate tabAlZr
 file Al_Zr_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabAlZr
+del_sym
+DGAlZr
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Co
+DGBCo
 GM(FCC_A1).X(Co)
 
 enter_sym
 tab
-dg_table_B_Co
-X(B) DG_B_Co
+tabBCo
+X(B) DGBCo
 
-tabulate dg_table_B_Co
+tabulate tabBCo
 file B_Co_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBCo
+del_sym
+DGBCo
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Cr
+DGBCr
 GM(FCC_A1).X(Cr)
 
 enter_sym
 tab
-dg_table_B_Cr
-X(B) DG_B_Cr
+tabBCr
+X(B) DGBCr
 
-tabulate dg_table_B_Cr
+tabulate tabBCr
 file B_Cr_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBCr
+del_sym
+DGBCr
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Fe
+DGBFe
 GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_B_Fe
-X(B) DG_B_Fe
+tabBFe
+X(B) DGBFe
 
-tabulate dg_table_B_Fe
+tabulate tabBFe
 file B_Fe_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBFe
+del_sym
+DGBFe
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Mo
+DGBMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_B_Mo
-X(B) DG_B_Mo
+tabBMo
+X(B) DGBMo
 
-tabulate dg_table_B_Mo
+tabulate tabBMo
 file B_Mo_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBMo
+del_sym
+DGBMo
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Nb
+DGBNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_B_Nb
-X(B) DG_B_Nb
+tabBNb
+X(B) DGBNb
 
-tabulate dg_table_B_Nb
+tabulate tabBNb
 file B_Nb_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBNb
+del_sym
+DGBNb
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Ta
+DGBTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_B_Ta
-X(B) DG_B_Ta
+tabBTa
+X(B) DGBTa
 
-tabulate dg_table_B_Ta
+tabulate tabBTa
 file B_Ta_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBTa
+del_sym
+DGBTa
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Ti
+DGBTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_B_Ti
-X(B) DG_B_Ti
+tabBTi
+X(B) DGBTi
 
-tabulate dg_table_B_Ti
+tabulate tabBTi
 file B_Ti_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBTi
+del_sym
+DGBTi
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_W
+DGBW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_B_W
-X(B) DG_B_W
+tabBW
+X(B) DGBW
 
-tabulate dg_table_B_W
+tabulate tabBW
 file B_W_data.txt
 
-s-a-v 1 X(B) .00017982 .00018018 .00000018
+del_sym
+tabBW
+del_sym
+DGBW
+s-a-v 1 X(B) .0001782 .0001818 .0000018
 step
 
 enter_sym
 fun
-DG_B_Zr
+DGBZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_B_Zr
-X(B) DG_B_Zr
+tabBZr
+X(B) DGBZr
 
-tabulate dg_table_B_Zr
+tabulate tabBZr
 file B_Zr_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabBZr
+del_sym
+DGBZr
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Cr
+DGCoCr
 GM(FCC_A1).X(Cr)
 
 enter_sym
 tab
-dg_table_Co_Cr
-X(Co) DG_Co_Cr
+tabCoCr
+X(Co) DGCoCr
 
-tabulate dg_table_Co_Cr
+tabulate tabCoCr
 file Co_Cr_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoCr
+del_sym
+DGCoCr
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Fe
+DGCoFe
 GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_Co_Fe
-X(Co) DG_Co_Fe
+tabCoFe
+X(Co) DGCoFe
 
-tabulate dg_table_Co_Fe
+tabulate tabCoFe
 file Co_Fe_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoFe
+del_sym
+DGCoFe
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Mo
+DGCoMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_Co_Mo
-X(Co) DG_Co_Mo
+tabCoMo
+X(Co) DGCoMo
 
-tabulate dg_table_Co_Mo
+tabulate tabCoMo
 file Co_Mo_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoMo
+del_sym
+DGCoMo
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Nb
+DGCoNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_Co_Nb
-X(Co) DG_Co_Nb
+tabCoNb
+X(Co) DGCoNb
 
-tabulate dg_table_Co_Nb
+tabulate tabCoNb
 file Co_Nb_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoNb
+del_sym
+DGCoNb
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Ta
+DGCoTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Co_Ta
-X(Co) DG_Co_Ta
+tabCoTa
+X(Co) DGCoTa
 
-tabulate dg_table_Co_Ta
+tabulate tabCoTa
 file Co_Ta_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoTa
+del_sym
+DGCoTa
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Ti
+DGCoTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Co_Ti
-X(Co) DG_Co_Ti
+tabCoTi
+X(Co) DGCoTi
 
-tabulate dg_table_Co_Ti
+tabulate tabCoTi
 file Co_Ti_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoTi
+del_sym
+DGCoTi
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_W
+DGCoW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Co_W
-X(Co) DG_Co_W
+tabCoW
+X(Co) DGCoW
 
-tabulate dg_table_Co_W
+tabulate tabCoW
 file Co_W_data.txt
 
-s-a-v 1 X(Co) .092907 .093093 .000093
+del_sym
+tabCoW
+del_sym
+DGCoW
+s-a-v 1 X(Co) .09207 .09393 .00093
 step
 
 enter_sym
 fun
-DG_Co_Zr
+DGCoZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Co_Zr
-X(Co) DG_Co_Zr
+tabCoZr
+X(Co) DGCoZr
 
-tabulate dg_table_Co_Zr
+tabulate tabCoZr
 file Co_Zr_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCoZr
+del_sym
+DGCoZr
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_Fe
+DGCrFe
 GM(FCC_A1).X(Fe)
 
 enter_sym
 tab
-dg_table_Cr_Fe
-X(Cr) DG_Cr_Fe
+tabCrFe
+X(Cr) DGCrFe
 
-tabulate dg_table_Cr_Fe
+tabulate tabCrFe
 file Cr_Fe_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCrFe
+del_sym
+DGCrFe
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_Mo
+DGCrMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_Cr_Mo
-X(Cr) DG_Cr_Mo
+tabCrMo
+X(Cr) DGCrMo
 
-tabulate dg_table_Cr_Mo
+tabulate tabCrMo
 file Cr_Mo_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCrMo
+del_sym
+DGCrMo
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_Nb
+DGCrNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_Cr_Nb
-X(Cr) DG_Cr_Nb
+tabCrNb
+X(Cr) DGCrNb
 
-tabulate dg_table_Cr_Nb
+tabulate tabCrNb
 file Cr_Nb_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCrNb
+del_sym
+DGCrNb
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_Ta
+DGCrTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Cr_Ta
-X(Cr) DG_Cr_Ta
+tabCrTa
+X(Cr) DGCrTa
 
-tabulate dg_table_Cr_Ta
+tabulate tabCrTa
 file Cr_Ta_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCrTa
+del_sym
+DGCrTa
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_Ti
+DGCrTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Cr_Ti
-X(Cr) DG_Cr_Ti
+tabCrTi
+X(Cr) DGCrTi
 
-tabulate dg_table_Cr_Ti
+tabulate tabCrTi
 file Cr_Ti_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCrTi
+del_sym
+DGCrTi
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_W
+DGCrW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Cr_W
-X(Cr) DG_Cr_W
+tabCrW
+X(Cr) DGCrW
 
-tabulate dg_table_Cr_W
+tabulate tabCrW
 file Cr_W_data.txt
 
-s-a-v 1 X(Cr) .07992 .08008 .00008
+del_sym
+tabCrW
+del_sym
+DGCrW
+s-a-v 1 X(Cr) .0792 .0808 .0008
 step
 
 enter_sym
 fun
-DG_Cr_Zr
+DGCrZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Cr_Zr
-X(Cr) DG_Cr_Zr
+tabCrZr
+X(Cr) DGCrZr
 
-tabulate dg_table_Cr_Zr
+tabulate tabCrZr
 file Cr_Zr_data.txt
 
-s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+del_sym
+tabCrZr
+del_sym
+DGCrZr
+s-a-v 1 X(Fe) .000891 .000909 .000009
 step
 
 enter_sym
 fun
-DG_Fe_Mo
+DGFeMo
 GM(FCC_A1).X(Mo)
 
 enter_sym
 tab
-dg_table_Fe_Mo
-X(Fe) DG_Fe_Mo
+tabFeMo
+X(Fe) DGFeMo
 
-tabulate dg_table_Fe_Mo
+tabulate tabFeMo
 file Fe_Mo_data.txt
 
-s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+del_sym
+tabFeMo
+del_sym
+DGFeMo
+s-a-v 1 X(Fe) .000891 .000909 .000009
 step
 
 enter_sym
 fun
-DG_Fe_Nb
+DGFeNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_Fe_Nb
-X(Fe) DG_Fe_Nb
+tabFeNb
+X(Fe) DGFeNb
 
-tabulate dg_table_Fe_Nb
+tabulate tabFeNb
 file Fe_Nb_data.txt
 
-s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+del_sym
+tabFeNb
+del_sym
+DGFeNb
+s-a-v 1 X(Fe) .000891 .000909 .000009
 step
 
 enter_sym
 fun
-DG_Fe_Ta
+DGFeTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Fe_Ta
-X(Fe) DG_Fe_Ta
+tabFeTa
+X(Fe) DGFeTa
 
-tabulate dg_table_Fe_Ta
+tabulate tabFeTa
 file Fe_Ta_data.txt
 
-s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+del_sym
+tabFeTa
+del_sym
+DGFeTa
+s-a-v 1 X(Fe) .000891 .000909 .000009
 step
 
 enter_sym
 fun
-DG_Fe_Ti
+DGFeTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Fe_Ti
-X(Fe) DG_Fe_Ti
+tabFeTi
+X(Fe) DGFeTi
 
-tabulate dg_table_Fe_Ti
+tabulate tabFeTi
 file Fe_Ti_data.txt
 
-s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+del_sym
+tabFeTi
+del_sym
+DGFeTi
+s-a-v 1 X(Fe) .000891 .000909 .000009
 step
 
 enter_sym
 fun
-DG_Fe_W
+DGFeW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Fe_W
-X(Fe) DG_Fe_W
+tabFeW
+X(Fe) DGFeW
 
-tabulate dg_table_Fe_W
+tabulate tabFeW
 file Fe_W_data.txt
 
-s-a-v 1 X(Fe) .0008991 .0009009 .0000009
+del_sym
+tabFeW
+del_sym
+DGFeW
+s-a-v 1 X(Fe) .000891 .000909 .000009
 step
 
 enter_sym
 fun
-DG_Fe_Zr
+DGFeZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Fe_Zr
-X(Fe) DG_Fe_Zr
+tabFeZr
+X(Fe) DGFeZr
 
-tabulate dg_table_Fe_Zr
+tabulate tabFeZr
 file Fe_Zr_data.txt
 
-s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+del_sym
+tabFeZr
+del_sym
+DGFeZr
+s-a-v 1 X(Mo) .004851 .004949 .000049
 step
 
 enter_sym
 fun
-DG_Mo_Nb
+DGMoNb
 GM(FCC_A1).X(Nb)
 
 enter_sym
 tab
-dg_table_Mo_Nb
-X(Mo) DG_Mo_Nb
+tabMoNb
+X(Mo) DGMoNb
 
-tabulate dg_table_Mo_Nb
+tabulate tabMoNb
 file Mo_Nb_data.txt
 
-s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+del_sym
+tabMoNb
+del_sym
+DGMoNb
+s-a-v 1 X(Mo) .004851 .004949 .000049
 step
 
 enter_sym
 fun
-DG_Mo_Ta
+DGMoTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Mo_Ta
-X(Mo) DG_Mo_Ta
+tabMoTa
+X(Mo) DGMoTa
 
-tabulate dg_table_Mo_Ta
+tabulate tabMoTa
 file Mo_Ta_data.txt
 
-s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+del_sym
+tabMoTa
+del_sym
+DGMoTa
+s-a-v 1 X(Mo) .004851 .004949 .000049
 step
 
 enter_sym
 fun
-DG_Mo_Ti
+DGMoTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Mo_Ti
-X(Mo) DG_Mo_Ti
+tabMoTi
+X(Mo) DGMoTi
 
-tabulate dg_table_Mo_Ti
+tabulate tabMoTi
 file Mo_Ti_data.txt
 
-s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+del_sym
+tabMoTi
+del_sym
+DGMoTi
+s-a-v 1 X(Mo) .004851 .004949 .000049
 step
 
 enter_sym
 fun
-DG_Mo_W
+DGMoW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Mo_W
-X(Mo) DG_Mo_W
+tabMoW
+X(Mo) DGMoW
 
-tabulate dg_table_Mo_W
+tabulate tabMoW
 file Mo_W_data.txt
 
-s-a-v 1 X(Mo) .0048951 .0049049 .0000049
+del_sym
+tabMoW
+del_sym
+DGMoW
+s-a-v 1 X(Mo) .004851 .004949 .000049
 step
 
 enter_sym
 fun
-DG_Mo_Zr
+DGMoZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Mo_Zr
-X(Mo) DG_Mo_Zr
+tabMoZr
+X(Mo) DGMoZr
 
-tabulate dg_table_Mo_Zr
+tabulate tabMoZr
 file Mo_Zr_data.txt
 
-s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+del_sym
+tabMoZr
+del_sym
+DGMoZr
+s-a-v 1 X(Nb) .0004752 .0004848 .0000048
 step
 
 enter_sym
 fun
-DG_Nb_Ta
+DGNbTa
 GM(FCC_A1).X(Ta)
 
 enter_sym
 tab
-dg_table_Nb_Ta
-X(Nb) DG_Nb_Ta
+tabNbTa
+X(Nb) DGNbTa
 
-tabulate dg_table_Nb_Ta
+tabulate tabNbTa
 file Nb_Ta_data.txt
 
-s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+del_sym
+tabNbTa
+del_sym
+DGNbTa
+s-a-v 1 X(Nb) .0004752 .0004848 .0000048
 step
 
 enter_sym
 fun
-DG_Nb_Ti
+DGNbTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Nb_Ti
-X(Nb) DG_Nb_Ti
+tabNbTi
+X(Nb) DGNbTi
 
-tabulate dg_table_Nb_Ti
+tabulate tabNbTi
 file Nb_Ti_data.txt
 
-s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+del_sym
+tabNbTi
+del_sym
+DGNbTi
+s-a-v 1 X(Nb) .0004752 .0004848 .0000048
 step
 
 enter_sym
 fun
-DG_Nb_W
+DGNbW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Nb_W
-X(Nb) DG_Nb_W
+tabNbW
+X(Nb) DGNbW
 
-tabulate dg_table_Nb_W
+tabulate tabNbW
 file Nb_W_data.txt
 
-s-a-v 1 X(Nb) .00047952 .00048048 .00000048
+del_sym
+tabNbW
+del_sym
+DGNbW
+s-a-v 1 X(Nb) .0004752 .0004848 .0000048
 step
 
 enter_sym
 fun
-DG_Nb_Zr
+DGNbZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Nb_Zr
-X(Nb) DG_Nb_Zr
+tabNbZr
+X(Nb) DGNbZr
 
-tabulate dg_table_Nb_Zr
+tabulate tabNbZr
 file Nb_Zr_data.txt
 
-s-a-v 1 X(Ta) .0320679 .0321321 .0000321
+del_sym
+tabNbZr
+del_sym
+DGNbZr
+s-a-v 1 X(Ta) .031779 .032421 .000321
 step
 
 enter_sym
 fun
-DG_Ta_Ti
+DGTaTi
 GM(FCC_A1).X(Ti)
 
 enter_sym
 tab
-dg_table_Ta_Ti
-X(Ta) DG_Ta_Ti
+tabTaTi
+X(Ta) DGTaTi
 
-tabulate dg_table_Ta_Ti
+tabulate tabTaTi
 file Ta_Ti_data.txt
 
-s-a-v 1 X(Ta) .0320679 .0321321 .0000321
+del_sym
+tabTaTi
+del_sym
+DGTaTi
+s-a-v 1 X(Ta) .031779 .032421 .000321
 step
 
 enter_sym
 fun
-DG_Ta_W
+DGTaW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Ta_W
-X(Ta) DG_Ta_W
+tabTaW
+X(Ta) DGTaW
 
-tabulate dg_table_Ta_W
+tabulate tabTaW
 file Ta_W_data.txt
 
-s-a-v 1 X(Ta) .0320679 .0321321 .0000321
+del_sym
+tabTaW
+del_sym
+DGTaW
+s-a-v 1 X(Ta) .031779 .032421 .000321
 step
 
 enter_sym
 fun
-DG_Ta_Zr
+DGTaZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Ta_Zr
-X(Ta) DG_Ta_Zr
+tabTaZr
+X(Ta) DGTaZr
 
-tabulate dg_table_Ta_Zr
+tabulate tabTaZr
 file Ta_Zr_data.txt
 
-s-a-v 1 X(Ti) .0073926 .0074074 .0000074
+del_sym
+tabTaZr
+del_sym
+DGTaZr
+s-a-v 1 X(Ti) .007326 .007474 .000074
 step
 
 enter_sym
 fun
-DG_Ti_W
+DGTiW
 GM(FCC_A1).X(W)
 
 enter_sym
 tab
-dg_table_Ti_W
-X(Ti) DG_Ti_W
+tabTiW
+X(Ti) DGTiW
 
-tabulate dg_table_Ti_W
+tabulate tabTiW
 file Ti_W_data.txt
 
-s-a-v 1 X(Ti) .0073926 .0074074 .0000074
+del_sym
+tabTiW
+del_sym
+DGTiW
+s-a-v 1 X(Ti) .007326 .007474 .000074
 step
 
 enter_sym
 fun
-DG_Ti_Zr
+DGTiZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_Ti_Zr
-X(Ti) DG_Ti_Zr
+tabTiZr
+X(Ti) DGTiZr
 
-tabulate dg_table_Ti_Zr
+tabulate tabTiZr
 file Ti_Zr_data.txt
 
-s-a-v 1 X(W) .0140859 .0141141 .0000141
+del_sym
+tabTiZr
+del_sym
+DGTiZr
+s-a-v 1 X(W) .013959 .014241 .000141
 step
 
 enter_sym
 fun
-DG_W_Zr
+DGWZr
 GM(FCC_A1).X(Zr)
 
 enter_sym
 tab
-dg_table_W_Zr
-X(W) DG_W_Zr
+tabWZr
+X(W) DGWZr
 
-tabulate dg_table_W_Zr
+tabulate tabWZr
 file W_Zr_data.txt
 
+del_sym
+tabWZr
+del_sym
+DGWZr
